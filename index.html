@@ -3,143 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>株式会社RIA&amp;CO｜家具の卸とインテリアコーディネート</title>
-<meta name="description" content="株式会社RIA&CO（リアアンドコー）は、家具の卸とインテリアコーディネートの会社です。医療機関・介護施設・店舗・オフィスから個人のお住まいまで、家具選びから納品・設置までお任せいただけます。">
+<title>株式会社RIA&amp;CO｜家具とインテリアコーディネート</title>
+<meta name="description" content="株式会社RIA&CO（リアアンドコー）は、家具の卸とインテリアコーディネートの会社です。個人のお住まいから、クリニック・介護施設・店舗・オフィスまで、家具選びから納品・設置までお任せいただけます。">
 <!-- 会社情報が確定するまで検索エンジンに登録しない設定。正式公開時にこの1行を削除する -->
 <meta name="robots" content="noindex">
-<meta property="og:title" content="株式会社RIA&CO｜家具の卸とインテリアコーディネート">
-<meta property="og:description" content="家具選びから納品・設置まで。法人のお客さまにも、個人のお客さまにも。">
+<meta property="og:title" content="株式会社RIA&CO｜家具とインテリアコーディネート">
+<meta property="og:description" content="家具選びから納品・設置まで。個人のお客さまにも、法人のお客さまにも。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Jost:wght@300;400;500&family=Shippori+Mincho:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --green:#1F3A34;      /* ボトルグリーン */
-  --green-deep:#162925;
-  --rose:#C9A2A6;       /* モーヴローズ */
-  --rose-pale:#EFE1E2;
-  --porcelain:#F5F6F3;  /* 白磁 */
-  --mist:#DCE3DF;
-  --brass:#A8894F;
-  --ink:#18201E;
+  --paper:#FAF9F6;     /* ロゴ背景のオフホワイト */
+  --sand:#F1ECE5;
+  --line:#E2DCD3;
+  --ink:#2B2A28;       /* ロゴ文字のチャコール */
+  --grey:#6E6C68;      /* ロゴのタグライン */
+  --terra:#C4856C;     /* ロゴの「&」 */
+  --terra-pale:#F3E3DB;
+  --latin:"Jost","Futura","Century Gothic",sans-serif;
+  --didone:"Bodoni Moda","Didot","Bodoni MT",serif;
   --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
   --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-  --latin:"Cormorant Garamond","Times New Roman",serif;
-  --wrap:1120px;
+  --wrap:1140px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--porcelain);color:var(--ink);font-family:var(--gothic);font-size:16px;line-height:1.9;letter-spacing:.03em}
-img{max-width:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:15.5px;line-height:2;letter-spacing:.05em}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
-h1,h2,h3,p,ul,ol,dl,dd{margin:0;padding:0}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--terra);outline-offset:4px}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0;padding:0}
 ul,ol{list-style:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-.amp{font-family:var(--latin);font-style:italic;font-weight:400}
+svg{display:block;max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+
+/* ロゴ（暫定ロゴを文字で再現） */
+.logo{font-family:var(--latin);font-weight:300;letter-spacing:.2em;text-decoration:none;line-height:1;display:inline-flex;align-items:baseline;color:var(--ink)}
+.logo .amp{font-family:var(--didone);font-weight:400;color:var(--terra);letter-spacing:0;font-size:1.28em;margin:0 .02em 0 -.14em;transform:translateY(.04em)}
 
 /* ヘッダー */
-.site-head{position:absolute;top:0;left:0;right:0;z-index:5;color:var(--porcelain)}
-.site-head .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:26px}
-.wordmark{font-family:var(--latin);font-weight:500;font-size:28px;letter-spacing:.14em;text-decoration:none;line-height:1}
-.wordmark .amp{color:var(--rose);letter-spacing:0;margin:0 .04em;font-size:1.15em}
-.nav{display:flex;gap:32px;font-size:14px}
-.nav a{text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
-.nav a:hover{border-bottom-color:var(--rose)}
+.site-head{position:sticky;top:0;z-index:10;background:rgba(250,249,246,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.site-head .logo{font-size:26px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-family:var(--latin);font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-bottom-color:var(--terra)}
+.nav .nav-cta{font-family:var(--gothic);letter-spacing:.1em;text-transform:none;background:var(--ink);color:var(--paper);padding:10px 22px;border:0}
+.nav .nav-cta:hover{background:var(--terra)}
 
 /* ヒーロー */
-.hero{position:relative;overflow:hidden;background:var(--green);color:var(--porcelain);min-height:min(100vh,860px);display:flex;align-items:flex-end}
-.hero-amp{position:absolute;right:-4vw;top:50%;transform:translateY(-52%);font-family:var(--latin);font-style:italic;font-weight:400;font-size:clamp(360px,62vw,900px);line-height:.8;color:var(--rose);user-select:none;pointer-events:none}
-.hero .wrap{position:relative;width:100%;padding-top:160px;padding-bottom:88px}
-.hero h1{font-family:var(--mincho);font-weight:500;font-size:clamp(34px,5.4vw,68px);line-height:1.45;letter-spacing:.08em;max-width:11em}
-.hero-lead{margin-top:28px;max-width:30em;font-size:16px;line-height:2.1;color:#E4EAE6}
-.hero-actions{margin-top:44px;display:flex;flex-wrap:wrap;gap:16px}
-.btn{display:inline-block;padding:16px 34px;font-size:15px;font-weight:500;text-decoration:none;border-radius:999px;letter-spacing:.08em;transition:background-color .2s,color .2s}
-.btn-fill{background:var(--rose);color:var(--green-deep)}
-.btn-fill:hover{background:var(--porcelain)}
-.btn-line{border:1px solid rgba(245,246,243,.55);color:var(--porcelain)}
-.btn-line:hover{background:rgba(245,246,243,.12)}
-@media (prefers-reduced-motion:no-preference){
-  .hero-amp{animation:ampIn 1.6s cubic-bezier(.2,.7,.2,1) both}
-  @keyframes ampIn{from{opacity:0;transform:translateY(-46%) rotate(-4deg)}to{opacity:1;transform:translateY(-52%) rotate(0)}}
-}
+.hero{padding:72px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:64px;align-items:center}
+.tagline{font-family:var(--latin);font-size:13px;letter-spacing:.42em;color:var(--grey);text-transform:uppercase}
+.hero h1{margin-top:28px;font-family:var(--mincho);font-weight:400;font-size:clamp(32px,4.4vw,56px);line-height:1.6;letter-spacing:.1em}
+.hero-lead{margin-top:28px;max-width:30em;color:#4A4946}
+.hero-actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:15px 36px;font-size:14.5px;text-decoration:none;letter-spacing:.14em;transition:background-color .2s,color .2s,border-color .2s}
+.btn-fill{background:var(--ink);color:var(--paper)}
+.btn-fill:hover{background:var(--terra)}
+.btn-line{border:1px solid var(--ink)}
+.btn-line:hover{border-color:var(--terra);color:var(--terra)}
+.hero-art{background:var(--sand);border-radius:240px 240px 0 0;padding:56px 36px 0;overflow:hidden}
+.hero-art svg{width:100%;height:auto}
 
-/* 共通セクション */
+/* セクション共通：英字見出し＋日本語見出し */
 .sec{padding:112px 0}
-.sec-title{font-family:var(--mincho);font-weight:500;font-size:clamp(26px,3.2vw,38px);line-height:1.6;letter-spacing:.08em}
-.sec-intro{margin-top:20px;max-width:34em}
+.sec-head .en{font-family:var(--latin);font-weight:300;font-size:clamp(30px,3.6vw,44px);letter-spacing:.24em;text-transform:uppercase;line-height:1.2}
+.sec-head .en .amp{font-family:var(--didone);color:var(--terra);letter-spacing:0;font-size:1.15em}
+.sec-head .ja{display:block;margin-top:12px;font-size:14px;color:var(--grey);letter-spacing:.2em}
+.sec-head.center{text-align:center}
 
-/* できること */
-.pairs{margin-top:64px;border-top:1px solid var(--mist)}
-.pair{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;padding:52px 0;border-bottom:1px solid var(--mist);align-items:baseline}
-.pair h3{font-family:var(--mincho);font-weight:500;font-size:clamp(24px,3vw,36px);line-height:1.5;letter-spacing:.06em;color:var(--green)}
-.pair h3 .amp{color:var(--rose);font-size:1.5em;line-height:.6;margin:0 .12em;vertical-align:-.08em}
-.pair p{max-width:32em}
+/* コンセプト */
+.concept{background:var(--sand)}
+.concept .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:64px}
+.concept h3{font-family:var(--mincho);font-weight:400;font-size:clamp(24px,2.8vw,34px);line-height:1.8;letter-spacing:.1em}
+.concept p{margin-top:24px;max-width:36em}
+
+/* サービス */
+.services{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service{padding:48px 36px 52px;border-left:1px solid var(--line)}
+.service:first-child{border-left:0;padding-left:0}
+.service:last-child{padding-right:0}
+.service svg{width:56px;height:56px;stroke:var(--terra);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.service h3{margin-top:28px;font-family:var(--mincho);font-weight:500;font-size:21px;letter-spacing:.1em}
+.service p{margin-top:14px;font-size:14.5px;color:#4A4946}
+.service ul{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.service li{font-size:12.5px;padding:2px 12px;background:var(--terra-pale);letter-spacing:.08em}
 
 /* 取扱い */
-.range{background:var(--rose-pale)}
-.range-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center}
-.range-num{font-family:var(--latin);font-weight:500;font-size:clamp(96px,15vw,200px);line-height:.9;color:var(--green);letter-spacing:-.01em}
-.range-num small{font-family:var(--mincho);font-size:.2em;letter-spacing:.1em;margin-left:.3em}
-.range-num .pre{font-family:var(--mincho);font-size:.16em;letter-spacing:.1em;display:block;margin-bottom:.6em}
-.range-items{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
-.range-items li{padding:6px 18px;border:1px solid var(--green);border-radius:999px;font-size:14px;color:var(--green)}
+.range{background:var(--ink);color:var(--paper)}
+.range .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
+.range-num{font-family:var(--didone);font-size:clamp(100px,14vw,190px);line-height:1;color:var(--terra)}
+.range-num span{font-family:var(--mincho);font-size:.17em;color:var(--paper);letter-spacing:.14em}
+.range-num .pre{display:block;margin-bottom:.9em}
+.range h3{font-family:var(--mincho);font-weight:400;font-size:clamp(22px,2.6vw,30px);line-height:1.8;letter-spacing:.1em}
+.range p{margin-top:20px;color:#D9D5CE;max-width:32em}
 
-/* お客さま */
-.who-grid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.who{padding:48px 44px 52px}
-.who-biz{background:var(--green);color:var(--porcelain)}
-.who-home{background:#fff;border:1px solid var(--mist)}
-.who h3{font-family:var(--mincho);font-weight:500;font-size:26px;letter-spacing:.08em}
-.who p{margin-top:16px}
-.who ul{margin-top:24px;border-top:1px solid currentColor}
-.who li{padding:14px 0;border-bottom:1px solid;border-color:rgba(127,140,135,.35);font-size:15px}
-.who-biz ul{border-top-color:rgba(245,246,243,.35)}
-.who-home ul{border-top-color:var(--mist)}
+/* 対応する空間 */
+.scenes{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.scene{background:var(--sand);padding:36px 32px 34px;display:flex;flex-direction:column;min-height:230px}
+.scene:nth-child(even){background:var(--terra-pale)}
+.scene .en{font-family:var(--latin);font-size:12px;letter-spacing:.3em;color:var(--grey);text-transform:uppercase}
+.scene h3{margin-top:10px;font-family:var(--mincho);font-weight:500;font-size:20px;letter-spacing:.1em}
+.scene p{margin-top:auto;padding-top:20px;font-size:14px;color:#4A4946;line-height:1.85}
+.scenes-note{margin-top:28px;font-size:13.5px;color:var(--grey);text-align:center}
+
+/* 法人・個人 */
+.who{background:var(--sand)}
+.who-grid{margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.who-card{background:var(--paper);padding:52px 48px 56px}
+.who-card .en{font-family:var(--latin);font-size:13px;letter-spacing:.3em;color:var(--terra);text-transform:uppercase}
+.who-card h3{margin-top:8px;font-family:var(--mincho);font-weight:500;font-size:25px;letter-spacing:.1em}
+.who-card p{margin-top:16px}
+.who-card ul{margin-top:24px;border-top:1px solid var(--line)}
+.who-card li{padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 
 /* 流れ */
-.flow{background:var(--green-deep);color:var(--porcelain)}
-.flow ol{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:step}
-.flow li{counter-increment:step;border-top:1px solid rgba(245,246,243,.3);padding-top:24px}
-.flow li::before{content:counter(step);font-family:var(--latin);font-style:italic;font-size:44px;line-height:1;color:var(--rose);display:block;margin-bottom:16px}
-.flow h3{font-family:var(--mincho);font-weight:500;font-size:20px;letter-spacing:.08em}
-.flow p{margin-top:10px;font-size:15px;color:#D5DDD9}
+.flow ol{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.flow li{border-top:1px solid var(--ink);padding-top:22px}
+.flow .num{font-family:var(--didone);font-size:38px;line-height:1;color:var(--terra)}
+.flow h3{margin-top:16px;font-family:var(--mincho);font-weight:500;font-size:19px;letter-spacing:.1em}
+.flow p{margin-top:10px;font-size:14.5px;color:#4A4946}
+
+/* FAQ */
+.faq{background:var(--sand)}
+.faq-list{margin:56px auto 0;max-width:820px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:24px 44px 24px 0;position:relative;font-family:var(--mincho);font-weight:500;font-size:17px;letter-spacing:.08em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:var(--latin);font-weight:300;font-size:26px;color:var(--terra)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 26px;max-width:40em}
 
 /* 会社概要 */
-.company dl{margin-top:48px;border-top:1px solid var(--mist);max-width:820px}
-.company .row{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--mist)}
-.company dt{font-weight:500;color:var(--green)}
-.pending{color:#7C8783}
+.company dl{margin:56px auto 0;max-width:820px;border-top:1px solid var(--line)}
+.company .row{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.company dt{color:var(--grey)}
+.pending{color:#9A9791}
 
 /* お問い合わせ */
-.contact{background:var(--rose);color:var(--green-deep);text-align:center}
-.contact .sec-title{font-size:clamp(28px,4vw,46px)}
-.contact p{margin:20px auto 0;max-width:32em}
-.contact-box{margin:40px auto 0;max-width:560px;background:var(--porcelain);padding:32px 28px;border-radius:4px}
-.contact-box strong{font-family:var(--mincho);font-weight:600;font-size:18px;letter-spacing:.08em}
-.contact-box p{margin-top:8px;font-size:15px}
+.contact{background:var(--terra-pale);text-align:center}
+.contact h3{margin-top:36px;font-family:var(--mincho);font-weight:400;font-size:clamp(22px,2.8vw,32px);letter-spacing:.1em;line-height:1.8}
+.contact p{margin:16px auto 0;max-width:32em}
+.contact-box{margin:40px auto 0;max-width:560px;background:var(--paper);padding:32px 28px}
+.contact-box strong{font-family:var(--mincho);font-weight:500;font-size:18px;letter-spacing:.1em}
+.contact-box p{margin-top:6px;font-size:14.5px;color:var(--grey)}
 
 /* フッター */
-.site-foot{background:var(--green-deep);color:#BFCAC5;padding:48px 0;font-size:13px}
-.site-foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.site-foot .wordmark{color:var(--porcelain);font-size:22px}
+.site-foot{padding:64px 0 40px;text-align:center;border-top:1px solid var(--line)}
+.site-foot .logo{font-size:34px;justify-content:center}
+.site-foot .tagline{margin-top:18px;font-size:11px}
+.site-foot small{display:block;margin-top:36px;font-family:var(--latin);font-size:12px;letter-spacing:.14em;color:var(--grey)}
 
-@media (max-width:860px){
-  .nav{display:none}
-  .hero{min-height:680px}
-  .hero-amp{right:-18vw;top:38%;font-size:118vw;opacity:.9}
-  .hero .wrap{padding-bottom:64px}
-  .sec{padding:76px 0}
-  .pair,.range-grid{grid-template-columns:1fr;gap:16px}
-  .pair{padding:40px 0}
+@media (max-width:960px){
+  .nav a:not(.nav-cta){display:none}
+  .hero{padding:48px 0 72px}
+  .hero .wrap,.concept .wrap,.range .wrap{grid-template-columns:1fr;gap:40px}
+  .hero-art{max-width:420px;margin:0 auto;width:100%}
+  .sec{padding:80px 0}
+  .services{grid-template-columns:1fr}
+  .service,.service:first-child,.service:last-child{padding:40px 0;border-left:0;border-top:1px solid var(--line)}
+  .service:first-child{border-top:0}
+  .scenes{grid-template-columns:1fr 1fr}
   .who-grid{grid-template-columns:1fr}
-  .who{padding:36px 28px 40px}
-  .flow ol{grid-template-columns:1fr 1fr;gap:36px 24px}
-  .company .row{grid-template-columns:1fr;gap:4px}
+  .who-card{padding:40px 28px 44px}
+  .flow ol{grid-template-columns:1fr 1fr;gap:40px 24px}
+  .company .row{grid-template-columns:1fr;gap:2px}
 }
-@media (max-width:480px){
-  .flow ol{grid-template-columns:1fr}
+@media (max-width:560px){
+  .wrap{padding:0 22px}
+  .site-head .wrap{height:64px}
+  .site-head .logo{font-size:22px}
+  .scenes,.flow ol{grid-template-columns:1fr}
+  .scene{min-height:0}
   .btn{width:100%;text-align:center}
 }
 </style>
@@ -148,86 +185,151 @@ ul,ol{list-style:none}
 
 <header class="site-head">
   <div class="wrap">
-    <a class="wordmark" href="#top" aria-label="RIA&CO トップへ">RIA<span class="amp">&amp;</span>CO</a>
+    <a class="logo" href="#top" aria-label="RIA&CO トップへ">RIA<span class="amp">&amp;</span>CO</a>
     <nav class="nav" aria-label="ページ内メニュー">
-      <a href="#service">できること</a>
-      <a href="#customers">お客さま</a>
-      <a href="#flow">ご依頼の流れ</a>
-      <a href="#company">会社概要</a>
-      <a href="#contact">お問い合わせ</a>
+      <a href="#concept">Concept</a>
+      <a href="#service">Service</a>
+      <a href="#scenes">Scenes</a>
+      <a href="#flow">Flow</a>
+      <a href="#faq">FAQ</a>
+      <a href="#company">Company</a>
+      <a class="nav-cta" href="#contact">相談する</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
   <section class="hero">
-    <div class="hero-amp" aria-hidden="true">&amp;</div>
     <div class="wrap">
-      <h1>家具と、<br>その先の空間まで。</h1>
-      <p class="hero-lead">RIA&amp;COは、家具の卸とインテリアコーディネートの会社です。一脚の椅子から施設まるごとの家具まで、選ぶところから納品・設置までお任せください。</p>
-      <div class="hero-actions">
-        <a class="btn btn-fill" href="#contact">相談する</a>
-        <a class="btn btn-line" href="#service">できることを見る</a>
+      <div>
+        <p class="tagline">Furniture &amp; Interior</p>
+        <h1>家具を選ぶことから、<br>空間が整うところまで。</h1>
+        <p class="hero-lead">RIA&amp;COは、家具の卸とインテリアコーディネートの会社です。お住まいの一室から、クリニックや介護施設の開設まで。選ぶ、そろえる、納めるをひとつの窓口でお引き受けします。</p>
+        <div class="hero-actions">
+          <a class="btn btn-fill" href="#contact">相談する</a>
+          <a class="btn btn-line" href="#service">サービスを見る</a>
+        </div>
+      </div>
+      <figure class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 440" fill="none" stroke="#2B2A28" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <!-- 窓 -->
+          <path d="M250 190V96a56 56 0 0 1 112 0v94z"/><path d="M306 40v150M250 118h112"/>
+          <!-- ペンダントライト -->
+          <path d="M120 0v70"/><path d="M92 106a28 28 0 0 1 56 0z" fill="#C4856C" stroke="#C4856C"/>
+          <!-- アート -->
+          <rect x="54" y="150" width="62" height="78"/><circle cx="85" cy="182" r="14" stroke="#C4856C"/><path d="M66 214h38"/>
+          <!-- ソファ -->
+          <path d="M70 330v-46a16 16 0 0 1 16-16h168a16 16 0 0 1 16 16v46"/>
+          <path d="M46 372v-50a14 14 0 0 1 28 0v22h192v-22a14 14 0 0 1 28 0v50z"/>
+          <path d="M170 268v76M62 372v18M278 372v18"/>
+          <path d="M96 344v-30a10 10 0 0 1 10-10h34a10 10 0 0 1 10 10v30" stroke="#C4856C"/>
+          <!-- サイドテーブルと植物 -->
+          <path d="M318 318h64M350 318v72M334 390h32"/>
+          <path d="M342 318v-22h16v22"/>
+          <path d="M350 296c0-30-16-44-30-50M350 296c0-36 14-52 30-60M350 296c-2-24 2-48 4-66" stroke="#C4856C"/>
+          <!-- 床 -->
+          <path d="M0 390h420"/>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec concept" id="concept">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="en">Concept</h2>
+        <span class="ja">コンセプト</span>
+      </div>
+      <div>
+        <h3>「&amp;」は、家具と空間を<br>つなぐしるしです。</h3>
+        <p>よい家具を選んでも、置いてみると何かが合わない。そんな経験はありませんか。RIA&amp;COは家具を届けて終わりにせず、照明やカーテン、ラグとの組み合わせまで含めて、空間として整うところまでご一緒します。</p>
+        <p>仕入れと提案の窓口がひとつなので、ご予算の中で力を入れる場所と抑える場所を、最初から一緒に決めていけます。</p>
       </div>
     </div>
   </section>
 
   <section class="sec" id="service">
     <div class="wrap">
-      <h2 class="sec-title">RIA&amp;COにできること</h2>
-      <p class="sec-intro">社名の「&amp;」は、ふたつをつなぐしるしです。家具を届けるだけで終わらせず、空間として整うところまでご一緒します。</p>
-      <div class="pairs">
-        <article class="pair">
-          <h3>卸<span class="amp">&amp;</span>コーディネート</h3>
-          <p>家具・照明・カーテン・ラグを卸価格でご用意し、空間全体の組み合わせまでご提案します。仕入れと提案の窓口がひとつなので、やり取りの手間がかかりません。</p>
+      <div class="sec-head">
+        <h2 class="en">Service</h2>
+        <span class="ja">サービス</span>
+      </div>
+      <div class="services">
+        <article class="service">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 46V26a6 6 0 0 1 12 0v8h16v-8a6 6 0 0 1 12 0v20zM14 20v-6a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v6M12 46v4M44 46v4"/></svg>
+          <h3>インテリアコーディネート</h3>
+          <p>ご希望の雰囲気と使い方をお聞きし、家具から照明・カーテン・ラグまで、空間全体の組み合わせをご提案します。</p>
+          <ul><li>家具</li><li>照明</li><li>カーテン</li><li>ラグ</li></ul>
         </article>
-        <article class="pair">
-          <h3>お手頃<span class="amp">&amp;</span>ハイブランド</h3>
-          <p>日常使いの価格帯から海外の高級ブランドまで、幅広いメーカーから選べます。ご予算に合わせて、力を入れる場所と抑える場所を一緒に決めていきます。</p>
+        <article class="service">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 18l20-10 20 10v22L28 50 8 40zM8 18l20 10 20-10M28 28v22"/></svg>
+          <h3>家具の卸・ご手配</h3>
+          <p>お手頃な価格帯から海外のハイブランドまで、幅広いメーカーの家具を卸価格でご用意します。一点からのお取り寄せも承ります。</p>
+          <ul><li>卸価格</li><li>一括手配</li><li>お取り寄せ</li></ul>
         </article>
-        <article class="pair">
-          <h3>家具<span class="amp">&amp;</span>設備</h3>
-          <p>新しく開設する介護施設には、家具に加えてナースコールや防犯カメラなどの設備もまとめてご用意できます。開設準備の発注先を減らせます。</p>
+        <article class="service">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M10 48V16l18-8 18 8v32M4 48h48M22 48V36h12v12M20 22h4M32 22h4M20 29h4M32 29h4"/></svg>
+          <h3>施設向けパッケージ</h3>
+          <p>新しく開設する介護施設などへ、居室・共用部の家具をまとめてお納めします。ナースコールや防犯カメラなどの設備もあわせてご用意できます。</p>
+          <ul><li>家具一式</li><li>ナースコール</li><li>防犯カメラ</li></ul>
         </article>
       </div>
     </div>
   </section>
 
   <section class="sec range">
-    <div class="wrap range-grid">
-      <div class="range-num" aria-label="約600社"><span class="pre">取扱いメーカー 約</span>600<small>社</small></div>
+    <div class="wrap">
+      <div class="range-num" aria-label="取扱いメーカー 約600社"><span class="pre">取扱いメーカー 約</span>600<span> 社</span></div>
       <div>
-        <h2 class="sec-title">ひとつの窓口から、幅広い選択肢を</h2>
-        <p class="sec-intro">メーカーごとに問い合わせる必要はありません。ご希望の雰囲気とご予算をお聞きして、候補をまとめてお持ちします。</p>
-        <ul class="range-items">
-          <li>家具</li><li>照明</li><li>カーテン</li><li>ラグ</li><li>施設向け設備</li>
-        </ul>
+        <h3>ひとつの窓口から、<br>幅広い選択肢を。</h3>
+        <p>メーカーごとに問い合わせる必要はありません。ご希望の雰囲気とご予算をお聞きして、候補をまとめてお持ちします。</p>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="customers">
+  <section class="sec" id="scenes">
     <div class="wrap">
-      <h2 class="sec-title">法人のお客さまにも、個人のお客さまにも</h2>
+      <div class="sec-head center">
+        <h2 class="en">Scenes</h2>
+        <span class="ja">対応する空間</span>
+      </div>
+      <div class="scenes">
+        <article class="scene"><span class="en">Residence</span><h3>邸宅・マンション</h3><p>新築やお引越しに合わせた家具一式、リビングや寝室の模様替え。</p></article>
+        <article class="scene"><span class="en">Second house</span><h3>別邸・セカンドハウス</h3><p>過ごし方に合わせたしつらえと、ブランド家具のお取り寄せ。</p></article>
+        <article class="scene"><span class="en">Clinic</span><h3>クリニック・病院</h3><p>待合室や診察室を、患者さまが落ち着ける空間に。</p></article>
+        <article class="scene"><span class="en">Care facility</span><h3>介護施設</h3><p>老人ホームなどの居室・共用部を、開設に合わせて一括で。</p></article>
+        <article class="scene"><span class="en">Shop</span><h3>店舗・サロン</h3><p>飲食店やサロンの世界観に合わせた家具と照明。</p></article>
+        <article class="scene"><span class="en">Office</span><h3>オフィス・応接室</h3><p>執務スペースから、お客さまを迎える応接室まで。</p></article>
+      </div>
+      <p class="scenes-note">コーディネート事例の写真は、順次こちらに掲載します。</p>
+    </div>
+  </section>
+
+  <section class="sec who" id="customers">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="en">Home <span class="amp">&amp;</span> Business</h2>
+        <span class="ja">個人のお客さま・法人のお客さま</span>
+      </div>
       <div class="who-grid">
-        <article class="who who-biz">
-          <h3>法人のお客さま</h3>
-          <p>開設や改装のスケジュールに合わせて、必要な家具を一括で手配します。</p>
-          <ul>
-            <li>クリニック・病院の待合室や診察室</li>
-            <li>老人ホームなど介護施設の居室・共用部</li>
-            <li>飲食店・サロンなどの店舗</li>
-            <li>オフィス・応接室</li>
-          </ul>
-        </article>
-        <article class="who who-home">
+        <article class="who-card">
+          <span class="en">For home</span>
           <h3>個人のお客さま</h3>
           <p>お住まいに合わせて、家具から照明・カーテンまで一式でコーディネートします。</p>
           <ul>
-            <li>新築・お引越しに合わせた家具一式</li>
-            <li>リビングや寝室の模様替え</li>
-            <li>別邸・セカンドハウスのしつらえ</li>
-            <li>ブランド家具のお取り寄せ</li>
+            <li>何から決めればよいか分からない</li>
+            <li>新居の家具をまとめてそろえたい</li>
+            <li>気になるブランドの家具を取り寄せたい</li>
+          </ul>
+        </article>
+        <article class="who-card">
+          <span class="en">For business</span>
+          <h3>法人のお客さま</h3>
+          <p>開設や改装のスケジュールに合わせて、必要な家具を一括で手配します。</p>
+          <ul>
+            <li>開設日に間に合うよう、まとめて納めてほしい</li>
+            <li>予算内で、見せ場と実用を両立させたい</li>
+            <li>家具と設備の発注先を減らしたい</li>
           </ul>
         </article>
       </div>
@@ -236,19 +338,52 @@ ul,ol{list-style:none}
 
   <section class="sec flow" id="flow">
     <div class="wrap">
-      <h2 class="sec-title">ご依頼の流れ</h2>
+      <div class="sec-head">
+        <h2 class="en">Flow</h2>
+        <span class="ja">ご依頼の流れ</span>
+      </div>
       <ol>
-        <li><h3>ご相談</h3><p>ご希望やご予算、納期の目安をお聞かせください。</p></li>
-        <li><h3>ヒアリング・現地確認</h3><p>図面や現地を拝見し、使い方と寸法を確認します。</p></li>
-        <li><h3>ご提案・お見積り</h3><p>家具の候補と配置案、お見積りをお出しします。</p></li>
-        <li><h3>納品・設置</h3><p>搬入から設置まで立ち会い、仕上がりを確認します。</p></li>
+        <li><span class="num">1</span><h3>ご相談</h3><p>ご希望やご予算、納期の目安をお聞かせください。</p></li>
+        <li><span class="num">2</span><h3>ヒアリング・現地確認</h3><p>図面や現地を拝見し、使い方と寸法を確認します。</p></li>
+        <li><span class="num">3</span><h3>ご提案・お見積り</h3><p>家具の候補と配置案、お見積りをお出しします。</p></li>
+        <li><span class="num">4</span><h3>納品・設置</h3><p>搬入から設置まで立ち会い、仕上がりを確認します。</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head center">
+        <h2 class="en">FAQ</h2>
+        <span class="ja">よくあるご質問</span>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>家具一点だけでも相談できますか。</summary>
+          <p>はい、一点からお取り寄せを承ります。お部屋全体のご相談も、家具一点のご相談も歓迎です。</p>
+        </details>
+        <details>
+          <summary>予算が決まっていなくても大丈夫ですか。</summary>
+          <p>大丈夫です。ご希望をお聞きしたうえで、価格帯の異なる候補をお出ししますので、比べながら決めていただけます。</p>
+        </details>
+        <details>
+          <summary>個人でも依頼できますか。</summary>
+          <p>はい。個人のお住まいのコーディネートも、法人の施設・店舗も、どちらもお引き受けしています。</p>
+        </details>
+        <details>
+          <summary>施設の開設日が決まっています。間に合いますか。</summary>
+          <p>納期は家具によって異なります。開設日から逆算して手配しますので、日程が決まりましたらお早めにご相談ください。</p>
+        </details>
+      </div>
     </div>
   </section>
 
   <section class="sec company" id="company">
     <div class="wrap">
-      <h2 class="sec-title">会社概要</h2>
+      <div class="sec-head center">
+        <h2 class="en">Company</h2>
+        <span class="ja">会社概要</span>
+      </div>
       <dl>
         <div class="row"><dt>会社名</dt><dd>株式会社RIA&amp;CO</dd></div>
         <div class="row"><dt>事業内容</dt><dd>家具・インテリア用品の卸売、インテリアコーディネート</dd></div>
@@ -262,8 +397,12 @@ ul,ol{list-style:none}
 
   <section class="sec contact" id="contact">
     <div class="wrap">
-      <h2 class="sec-title">まずはお気軽にご相談ください</h2>
-      <p>図面一枚、写真一枚からでもご相談いただけます。お見積りは無料です。</p>
+      <div class="sec-head center">
+        <h2 class="en">Contact</h2>
+        <span class="ja">お問い合わせ</span>
+      </div>
+      <h3>まずはお気軽にご相談ください。</h3>
+      <p>図面一枚、写真一枚からでもご相談いただけます。</p>
       <div class="contact-box">
         <strong>お問い合わせ窓口は準備中です</strong>
         <p>電話番号・メールアドレスは、まもなくこちらに掲載します。</p>
@@ -274,8 +413,9 @@ ul,ol{list-style:none}
 
 <footer class="site-foot">
   <div class="wrap">
-    <a class="wordmark" href="#top" aria-label="RIA&CO トップへ">RIA<span class="amp">&amp;</span>CO</a>
-    <small>&copy; 2026 株式会社RIA&amp;CO</small>
+    <a class="logo" href="#top" aria-label="RIA&CO トップへ">RIA<span class="amp">&amp;</span>CO</a>
+    <p class="tagline">Furniture &amp; Interior</p>
+    <small>&copy; 2026 RIA&amp;CO Inc.</small>
   </div>
 </footer>
 
