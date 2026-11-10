@@ -217,7 +217,7 @@ svg{display:block;max-width:100%}
   @keyframes archIn{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
   .js .hero-art svg [pathLength]{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s cubic-bezier(.5,0,.2,1) forwards;animation-delay:calc(.5s + var(--i,0) * .12s)}
   @keyframes draw{to{stroke-dashoffset:0}}
-  .js .hero-art .shade{fill-opacity:0;animation:draw 1.6s cubic-bezier(.5,0,.2,1) .6s forwards,fillIn .8s ease 1.6s forwards}
+  .js .hero-art svg .shade[pathLength]{fill-opacity:0;animation:draw 1.6s cubic-bezier(.5,0,.2,1) .6s forwards,fillIn .8s ease 1.6s forwards}
   @keyframes fillIn{to{fill-opacity:1}}
   .hero-art .lamp{transform-origin:120px 0;animation:sway 6s ease-in-out 2.4s infinite}
   @keyframes sway{0%,100%{transform:rotate(0)}25%{transform:rotate(2.4deg)}75%{transform:rotate(-2.4deg)}}
