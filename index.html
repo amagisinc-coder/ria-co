@@ -181,6 +181,58 @@ svg{display:block;max-width:100%}
   .scene{min-height:0}
   .btn{width:100%;text-align:center}
 }
+
+/* ───────── 動き ───────── */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.marquee-track{display:flex;width:max-content}
+.marquee span{font-family:var(--latin);font-weight:300;font-size:clamp(22px,2.6vw,34px);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;padding-right:1.6em;color:var(--ink)}
+.marquee i{font-family:var(--didone);font-style:normal;color:var(--terra);letter-spacing:0;font-size:1.15em}
+.scene,.who-card{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.scene{position:relative}
+.scene::after{content:"";position:absolute;left:32px;right:32px;bottom:0;height:2px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.service svg{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.site-head{transition:box-shadow .3s}
+.site-head.scrolled{box-shadow:0 6px 24px rgba(43,42,40,.06)}
+.btn-fill,.nav .nav-cta{position:relative;overflow:hidden;z-index:0}
+@media (hover:hover){
+  .scene:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(43,42,40,.08)}
+  .scene:hover::after{transform:scaleX(1)}
+  .who-card:hover{transform:translateY(-4px)}
+  .service:hover svg{transform:translateY(-6px) rotate(-4deg)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .marquee-track{animation:marquee 48s linear infinite}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+
+  /* トップ：文字が順に立ち上がる */
+  .js .hero .tagline,.js .hero h1 span,.js .hero-lead,.js .hero-actions{opacity:0;animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+  .js .hero h1 span:nth-of-type(1){animation-delay:.15s}
+  .js .hero h1 span:nth-of-type(2){animation-delay:.35s}
+  .js .hero-lead{animation-delay:.6s}
+  .js .hero-actions{animation-delay:.8s}
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+  /* トップ：イラストを一筆ずつ描く */
+  .js .hero-art{animation:archIn 1.2s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes archIn{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+  .js .hero-art svg [pathLength]{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s cubic-bezier(.5,0,.2,1) forwards;animation-delay:calc(.5s + var(--i,0) * .12s)}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .js .hero-art .shade{fill-opacity:0;animation:draw 1.6s cubic-bezier(.5,0,.2,1) .6s forwards,fillIn .8s ease 1.6s forwards}
+  @keyframes fillIn{to{fill-opacity:1}}
+  .hero-art .lamp{transform-origin:120px 0;animation:sway 6s ease-in-out 2.4s infinite}
+  @keyframes sway{0%,100%{transform:rotate(0)}25%{transform:rotate(2.4deg)}75%{transform:rotate(-2.4deg)}}
+
+  /* スクロールで現れる */
+  .js .reveal{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0) * .12s)}
+  .js .reveal.in{opacity:1;transform:none}
+  .js .sec-head .en{letter-spacing:.6em;opacity:0;transition:letter-spacing 1.4s cubic-bezier(.2,.7,.2,1),opacity 1s}
+  .js .sec-head.in .en{letter-spacing:.24em;opacity:1}
+  .js .sec-head .ja{opacity:0;transition:opacity 1s .4s}
+  .js .sec-head.in .ja{opacity:1}
+  .js .flow li{border-top-color:transparent;position:relative}
+  .js .flow li::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0) * .18s)}
+  .js .flow li.in::before{transform:scaleX(1)}
+}
 </style>
 </head>
 <body>
@@ -217,7 +269,7 @@ svg{display:block;max-width:100%}
           <!-- 窓 -->
           <path d="M250 190V96a56 56 0 0 1 112 0v94z"/><path d="M306 40v150M250 118h112"/>
           <!-- ペンダントライト -->
-          <path d="M120 0v70"/><path d="M92 106a28 28 0 0 1 56 0z" fill="#C4856C" stroke="#C4856C"/>
+          <g class="lamp"><path d="M120 0v70"/><path class="shade" d="M92 106a28 28 0 0 1 56 0z" fill="#C4856C" stroke="#C4856C"/></g>
           <!-- アート -->
           <rect x="54" y="150" width="62" height="78"/><circle cx="85" cy="182" r="14" stroke="#C4856C"/><path d="M66 214h38"/>
           <!-- ソファ -->
@@ -235,6 +287,8 @@ svg{display:block;max-width:100%}
       </figure>
     </div>
   </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span><span>Furniture <i>&amp;</i> Interior</span></div></div>
 
   <section class="sec concept" id="concept">
     <div class="wrap">
@@ -421,5 +475,55 @@ svg{display:block;max-width:100%}
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var root=document.documentElement;root.classList.add('js');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ヘッダーの影
+  var head=document.querySelector('.site-head');
+  function onScroll(){head.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // イラストの線に描画順を付ける
+  document.querySelectorAll('.hero-art svg path,.hero-art svg rect,.hero-art svg circle').forEach(function(el,i){
+    el.setAttribute('pathLength','1');el.style.setProperty('--i',i);
+  });
+
+  // スクロールで現れる要素
+  var groups=['.services .service','.scenes .scene','.who-grid .who-card','.flow li','.faq-list details','.company .row'];
+  groups.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el,i){el.classList.add('reveal');el.style.setProperty('--d',i%4)});
+  });
+  document.querySelectorAll('.concept h3,.concept p,.range-num,.range h3,.range p,.scenes-note,.contact h3,.contact p,.contact-box,.sec-head').forEach(function(el){
+    if(!el.classList.contains('sec-head')) el.classList.add('reveal');
+    el.classList.add('watch');
+  });
+  var targets=document.querySelectorAll('.reveal,.watch');
+  var num=document.querySelector('.range-num');
+  function countUp(){
+    var node=null;
+    num.childNodes.forEach(function(n){if(n.nodeType===3&&n.textContent.trim()==='600')node=n});
+    if(!node||reduce)return;
+    var start=null,dur=1800;
+    function step(t){
+      if(!start)start=t;var p=Math.min((t-start)/dur,1);var e=1-Math.pow(1-p,3);
+      node.textContent=Math.round(600*e);
+      if(p<1)requestAnimationFrame(step);else node.textContent='600';
+    }
+    node.textContent='0';requestAnimationFrame(step);
+  }
+  if(!('IntersectionObserver' in window)){targets.forEach(function(el){el.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      en.target.classList.add('in');io.unobserve(en.target);
+      if(en.target===num)countUp();
+    });
+  },{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  targets.forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>
